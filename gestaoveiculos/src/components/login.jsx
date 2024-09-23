@@ -1,7 +1,10 @@
 import React from 'react';
-import './login.css'; // Certifique-se que o CSS está corretamente importado
+import './login.css'; 
+import frotasImg from "../assets/frotas.png"
+
 
 const FrotasLogin = () => {
+
     return (
         <div className='container'>
             {/* Lado esquerdo com cor sólida */}
@@ -17,15 +20,15 @@ const FrotasLogin = () => {
                 <div className='fields-informations'>
                     <form>
                         <div className='input-group-field'>
-                            <label htmlFor='email'>Email</label>
+                            <label htmlFor='email' required>Email</label>
                             <input type='text' className='text-field' id='email' />
                         </div>
                         <div className='input-group-field'>
-                            <label htmlFor='password'>Senha</label>
+                            <label htmlFor='password' required>Senha</label>
                             <input type='password' className='password-field' id='password' />
                         </div>
                         <div className='forgot-password'>
-                            <a href='/forgot-password'>Esqueceu a senha?</a>
+                            <a href='/forgot-pass'>Esqueceu a senha?</a>
                         </div>
                         <div className='btn access-account'>
                             <button type='submit' className='access-invite'>Acessar Conta</button>
