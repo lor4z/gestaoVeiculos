@@ -24,17 +24,23 @@ body, html {
     overflow: hidden;
 }
 
-/* Lado esquerdo com cor sólida */
+.frotas-veiculos{
+    width: 10vh;
+    height: 10vh;
+}
 .container .left-side {
     width: 80vh;
     height: 80vh;
-    background-color: #d3d3d3; /* Cor sólida no lugar da imagem */
+    background-image: url('../assets/frotas.png'); /* Adiciona a imagem como fundo */
+    background-size: cover; /* Faz com que a imagem cubra todo o espaço */
+    background-position: center; /* Centraliza a imagem */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
+
 
 /* Estilo da área onde ficaria a logo */
 .container .left-side .logo {
@@ -46,9 +52,9 @@ body, html {
 
 /* Nome do site "LogiFleet" */
 .container .left-side .site-name {
-    font-size: 24px;
+    font-size: 35px;
     font-weight: bold;
-    color: #333;
+    color: #000000;
 }
 
 /* Lado direito com o formulário */
