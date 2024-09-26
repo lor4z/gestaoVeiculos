@@ -1,6 +1,7 @@
 import React from 'react';
 import './login.css'; 
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 
@@ -31,7 +32,7 @@ const FrotasLogin = () => {
                 setError(data.message || 'Credenciais inválidas');
             }
         } catch (error) {
-            setError('Erro ao realizar login. Tente novamente mais tarde.');
+            setError('Erro ao realizar login. Senha ou E-mail incorreto.');
         }
     };
 
@@ -40,34 +41,49 @@ const FrotasLogin = () => {
             {/* Lado esquerdo com cor sólida */}
             <div className='left-side'>
                 <div className='logo'></div> {/* Deixando vazio */}
-                <div className='site-name'>LogiFleet</div> {/* Nome do site */}
+                <div className='site-name'></div> {/* Nome do site */}
             </div>
 
             {/* Lado direito com o formulário */}
             <div className='right-side'>
                 <h1>Bem vindo de volta!</h1>
                 <p>Insira seus dados abaixo para acessar a plataforma</p>
+                {error && <p className='error'>{error}</p>}
                 <div className='fields-informations'>
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <div className='input-group-field'>
-                            <label htmlFor='email' required>Email</label>
-                            <input type='text' className='text-field' id='email' />
+                        <label htmlFor='email'>Email</label>
+                            <input
+                                type='email'
+                                className='text-field'
+                                id='email'
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
+                            />
                         </div>
                         <div className='input-group-field'>
-                            <label htmlFor='password' required>Senha</label>
-                            <input type='password' className='password-field' id='password' />
+                        <label htmlFor='password'>Senha</label>
+                            <input
+                                type='password'
+                                className='password-field'
+                                id='password'
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                required
+                            />
                         </div>
                         <div className='forgot-password'>
-                            <a href='/forgot-pass'>Esqueceu a senha?</a>
+                            <Link to="/esqueceu-a-senha">Esqueceu a senha?</Link>
                         </div>
                         <div className='btn access-account'>
                             <button type='submit' className='access-invite'>Acessar Conta</button>
                         </div>
                         <div className='create-account'>
-                            <p>Não possui conta? <a href='/create-account'>Criar Agora</a></p>
+                            <p>Não possui conta? <Link to="/criar-conta">Criar Agora</Link></p>
                         </div>
                         <div className='support-link'>
-                            <a href='/support' className= 'txt-suport-invite'>Conversar com o Suporte ➤</a>
+                            <Link to="/contato-suporte" className= 'txt-suport-invite'>Conversar com o Suporte ➤</Link>
                         </div>
                     </form>
                 </div>
