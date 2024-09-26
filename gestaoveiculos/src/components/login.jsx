@@ -1,9 +1,39 @@
 import React from 'react';
 import './login.css'; 
-import frotasImg from "../assets/frotas.png"
+import { useState } from 'react';
+
 
 
 const FrotasLogin = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
+        // Enviando os dados de login ao backend
+        try {
+            const response = await fetch('', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, password }),
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                // Login bem-sucedido, redirecionar ou realizar outras ações
+                console.log('Login realizado com sucesso');
+            } else {
+                setError(data.message || 'Credenciais inválidas');
+            }
+        } catch (error) {
+            setError('Erro ao realizar login. Tente novamente mais tarde.');
+        }
+    };
 
     return (
         <div className='container'>
@@ -44,6 +74,8 @@ const FrotasLogin = () => {
             </div>
         </div>
     );
+
+    
 }
 
 export default FrotasLogin;
