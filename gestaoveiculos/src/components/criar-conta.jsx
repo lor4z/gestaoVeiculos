@@ -6,6 +6,7 @@ const CriarConta = () => {
     return (
         <div className="construction-container">
             <div className="text-section">
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"></link>
                 <div className="warning-icon">⚠️</div>
                 <h1>Em construção</h1>
                 <p>

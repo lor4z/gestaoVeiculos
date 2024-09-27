@@ -5,6 +5,7 @@ import './suporte.css'; // Arquivo CSS para estilização
 const Suporte = () => {
     return (
         <div className="support-container">
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"></link>
             <div className="text-section">
                 <div className="warning-icon">⚠️</div>
                 <h1>Em construção</h1>

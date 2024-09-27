@@ -44,6 +44,7 @@ const FrotasRecuperarSenha = () => {
 
     return (
         <div className='container'>
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"></link>
             <div className='left-side'>
                 <div className='logo'></div> 
                 <div className='site-name'></div> 

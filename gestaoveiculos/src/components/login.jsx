@@ -38,6 +38,7 @@ const FrotasLogin = () => {
 
     return (
         <div className='container'>
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"></link>
             {/* Lado esquerdo com cor sólida */}
             <div className='left-side'>
                 <div className='logo'></div> {/* Deixando vazio */}
