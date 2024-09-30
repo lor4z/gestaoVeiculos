@@ -6,6 +6,7 @@ import CriarConta from "./criar-conta";
 import EsqueceuSenha from "./forgot-pass";
 import Suporte from "./suporte";
 import VoltarLogin from "./forgot-pass";
+import Recuperar from "./recuperar-senha";
 
 const AppRoutes = () => {   
    return (
@@ -15,6 +16,8 @@ const AppRoutes = () => {
                <Route path="/criar-conta" element={<CriarConta />} />
                <Route path="/esqueceu-a-senha" element={<EsqueceuSenha />} />
                <Route path="/contato-suporte" element={<Suporte />} />
+               <Route path="/recuperar-senha" element={<Recuperar/>}/>
+
            </Routes>
        </BrowserRouter>
    )

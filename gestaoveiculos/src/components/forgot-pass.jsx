@@ -3,7 +3,6 @@ import './forgot-pass.css';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
-
 const FrotasRecuperarSenha = () => {
     const [email, setEmail] = useState('');
     const [emailError, setEmailError] = useState('');
@@ -43,37 +42,37 @@ const FrotasRecuperarSenha = () => {
     };
 
     return (
-        <div className='container'>
+        <div className='container-main'>
             <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"></link>
-            <div className='left-side'>
+            <div className='section-left'>
                 <div className='logo'></div> 
-                <div className='site-name'></div> 
+                <div className='name-site'></div> 
             </div>
-            <div className='right-side'>
-                <h1>Esqueceu a senha?</h1>
-                <p>Insira seu e-mail para receber o link de recuperação de senha.</p>
-                <div className='fields-informations'>
-                <form onSubmit={handleSubmit}>
-                        <div className='input-group-field'>
-                        <label htmlFor='email'>Email</label>
+            <div className='section-right'>
+                <h1>Esqueceu sua senha?</h1>
+                <p>Digite seu e-mail para receber o link de recuperação de senha.</p>
+                <div className='input-fields'>
+                    <form onSubmit={handleSubmit}>
+                        <div className='input-group'>
+                            <label htmlFor='email'>Email</label>
                             <input 
                                 type='email' 
-                                className='text-field' 
+                                className='input-text' 
                                 id='email' 
                                 value={email}
                                 onChange={handleEmailChange}
                                 required
                             />
                         </div>
-                        {emailError && <p className='error'>{emailError}</p>}
-                        <div className='btn access-account'>
-                            <button type='submit' className='access-invite' disabled={loading}>Recuperar</button>
+                        {emailError && <p className='error-message'>{emailError}</p>}
+                        <div className='button access-account'>
+                            <button type='submit' className='btn-access' disabled={loading}>Recuperar</button>
                         </div>
-                        <div className='login-account'>
-                        <p><Link to="/">Voltar ao login</Link></p>
+                        <div className='back-login'>
+                            <p><Link to="/recuperar-senha">Voltar para o login</Link></p>
                         </div>
-                        <div className='support-link'>
-                            <a href='/support' className= 'txt-suport-invite'>Conversar com o Suporte ➤</a>
+                        <div className='support'>
+                            <a href='/contato-suporte' className='support-text'>Fale com o suporte ➤</a>
                         </div>
                     </form>
                 </div>
