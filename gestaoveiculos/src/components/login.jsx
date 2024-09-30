@@ -1,7 +1,7 @@
 import React from 'react';
 import './login.css'; 
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 
@@ -9,6 +9,7 @@ const FrotasLogin = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -28,6 +29,7 @@ const FrotasLogin = () => {
             if (data.success) {
                 // Login bem-sucedido, redirecionar ou realizar outras ações
                 console.log('Login realizado com sucesso');
+                navigate('/pagina-acesso');
             } else {
                 setError(data.message || 'Credenciais inválidas');
             }
