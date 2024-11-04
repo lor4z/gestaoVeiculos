@@ -1,3 +1,4 @@
+/* Estilos globais */
 * {
     margin: 0;
     padding: 0;
@@ -5,37 +6,42 @@
     font-family: Poppins;
 }
 
-body, html {
+body,
+html {
     height: 100%;
+    font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #333; /* Fundo escuro para o contraste */
-}
-form{
-    
+    background-color: #333;
+    /* Fundo escuro para o contraste */
 }
 
 /* Container principal */
-.main-container {
+.container {
     display: flex;
     width: 80%;
     height: 70vh;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    align-items: center;
 }
 
-.fleet-icon{
+.frotas-veiculos {
     width: 10vh;
     height: 10vh;
 }
-.main-container .left-section {
-    width: 100vh;
+
+.container .left-side {
+    width: 80vh;
     height: 80vh;
-    background-image: url('../assets/frotas.png'); /* Adiciona a imagem como fundo */
-    background-size: cover; /* Faz com que a imagem cubra todo o espaço */
-    background-position: center; /* Centraliza a imagem */
+    background-image: url('../../assets/frotas.png');
+    /* Adiciona a imagem como fundo */
+    background-size: cover;
+    /* Faz com que a imagem cubra todo o espaço */
+    background-position: center;
+    /* Centraliza a imagem */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -45,23 +51,24 @@ form{
 
 
 /* Estilo da área onde ficaria a logo */
-.main-container .left-section .company-logo {
+.container .left-side .logo {
     width: 150px;
     height: 100px;
-    background-color: transparent; /* Deixando vazio */
+    background-color: transparent;
+    /* Deixando vazio */
     margin-bottom: 20px;
 }
 
 /* Nome do site "LogiFleet" */
-.main-container .left-section .company-name {
+.container .left-side .site-name {
     font-size: 35px;
     font-weight: bold;
     color: #000000;
 }
 
 /* Lado direito com o formulário */
-.main-container .right-section {
-    width: 60%;
+.container .right-side {
+    width: 50%;
     padding: 40px;
     display: flex;
     flex-direction: column;
@@ -71,7 +78,7 @@ form{
 h1 {
     font-size: 32px;
     color: #333;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 }
 
 p {
@@ -80,15 +87,15 @@ p {
     margin-bottom: 30px;
 }
 
-.password-input-group {
+.input-group-field {
     position: relative;
     width: 100%;
     max-width: 400px;
     margin-bottom: 20px;
 }
 
-.password-input-group input {
-    width: 44vh;
+.input-group-field input {
+    width: 100%;
     padding: 15px;
     border: 1px solid #000;
     border-radius: 8px;
@@ -97,7 +104,7 @@ p {
     transition: all 0.3s ease;
 }
 
-.password-input-group label {
+.input-group-field label {
     position: absolute;
     top: -10px;
     left: 10px;
@@ -110,19 +117,43 @@ p {
 }
 
 
-.password-input-group input:focus {
+.input-group-field input:focus {
     border-color: #000;
 }
 
-.password-input-group input:focus + label {
+.input-group-field input:focus+label {
     color: #000;
 }
 
-.button-container {
+.text-field,
+.password-field {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.forgot-password {
+    text-align: right;
     margin-bottom: 20px;
 }
 
-.submit-button {
+.forgot-password Link {
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.forgot-password Link:hover {
+    text-decoration: underline;
+}
+
+.btn.access-account {
+    margin-bottom: 20px;
+}
+
+.access-invite {
     width: 100%;
     padding: 15px;
     font-size: 16px;
@@ -131,43 +162,57 @@ p {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-bottom: 20%;
 }
 
-.submit-button:hover {
+.access-invite:hover {
     background-color: #0056b3;
 }
-.button-container {
+
+.btn {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza os itens */
+    align-items: center;
+    /* Centraliza os itens */
+}
+
+.create-account p {
+    align-items: center;
+    /* Centraliza os itens */
+    margin: 20px 0;
+    /* Espaço abaixo do texto */
+    text-align: center;
+    /* Centraliza o texto */
 }
 
 .support-link {
-    text-align: right; /* Mantém alinhado à direita */
-    margin-top: 20px; /* Espaço adicional para separação */
+    text-align: right;
+    /* Mantém alinhado à direita */
+    margin-top: 20px;
+    /* Espaço adicional para separação */
 }
-.support-text{
-    text-align: right; /* Mantém alinhado à direita */
-    margin-top: 20px; /* Espaço adicional para separação */
+
+.txt-suport-invite {
+    text-align: right;
+    /* Mantém alinhado à direita */
+    margin-top: 20px;
+    /* Espaço adicional para separação */
     color: #838383;
     text-decoration: none;
 }
 
-.support-text a{
-    margin-bottom: 10%;
-}
-
+.create-account,
 .support-link {
     text-align: right;
     margin: 10px 0;
 }
 
+.create-account p,
 .support-link Link {
     font-size: 14px;
     text-decoration: none;
 }
 
+.create-account Link:hover,
 .support-link Link:hover {
     text-decoration: underline;
 }
@@ -181,18 +226,18 @@ p {
 
 /* Para dispositivos móveis ou telas menores */
 @media screen and (max-width: 768px) {
-    .main-container {
+    .container {
         flex-direction: column;
         height: auto;
         width: 90%;
     }
 
-    .main-container .left-section {
+    .container .left-side {
         width: 100%;
         height: 200px;
     }
 
-    .main-container .right-section {
+    .container .right-side {
         width: 100%;
         padding: 20px;
     }

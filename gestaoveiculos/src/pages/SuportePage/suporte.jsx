@@ -17,11 +17,11 @@ const Suporte = () => {
                 <button className="notify-btn">Me avise</button>
             </div>
             <div className="image-section">
-                <img src={require('../assets/computador.png')} alt="Em Construção" className="illustration" />
+                <img src={require('../../assets/computador.png')} alt="Em Construção" className="illustration" />
             </div>
         </div>
     );
-    
+
 }
 
 export default Suporte;

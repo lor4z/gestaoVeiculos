@@ -1,5 +1,5 @@
 import React from 'react';
-import './forgot-pass.css'; 
+import './forgot-pass.css';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -45,8 +45,8 @@ const FrotasRecuperarSenha = () => {
         <div className='container-main'>
             <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"></link>
             <div className='section-left'>
-                <div className='logo'></div> 
-                <div className='name-site'></div> 
+                <div className='logo'></div>
+                <div className='name-site'></div>
             </div>
             <div className='section-right'>
                 <h1>Esqueceu sua senha?</h1>
@@ -55,10 +55,10 @@ const FrotasRecuperarSenha = () => {
                     <form onSubmit={handleSubmit}>
                         <div className='input-group'>
                             <label htmlFor='email'>Email</label>
-                            <input 
-                                type='email' 
-                                className='input-text' 
-                                id='email' 
+                            <input
+                                type='email'
+                                className='input-text'
+                                id='email'
                                 value={email}
                                 onChange={handleEmailChange}
                                 required
@@ -69,7 +69,7 @@ const FrotasRecuperarSenha = () => {
                             <button type='submit' className='btn-access' disabled={loading}>Recuperar</button>
                         </div>
                         <div className='back-login'>
-                            <p><Link to="/recuperar-senha">Voltar para o login</Link></p>
+                            <p><Link to="/">Voltar para o login</Link></p>
                         </div>
                         <div className='support'>
                             <a href='/contato-suporte' className='support-text'>Fale com o suporte ➤</a>

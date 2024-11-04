@@ -1,5 +1,5 @@
 import React from 'react';
-import './recuperar-senha.css'; 
+import './recuperar-senha.css';
 import { Link, useNavigate } from 'react-router-dom'; // Importa useNavigate
 import { useState } from 'react';
 
@@ -37,8 +37,8 @@ const FrotasRecuperarSenha = () => {
         <div className='main-container'>
             <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"></link>
             <div className='left-section'>
-                <div className='company-logo'></div> 
-                <div className='company-name'></div> 
+                <div className='company-logo'></div>
+                <div className='company-name'></div>
             </div>
             <div className='right-section'>
                 <h1>Redefinir senha</h1>
@@ -46,30 +46,30 @@ const FrotasRecuperarSenha = () => {
                     <form onSubmit={handleSubmit}> {/* Adiciona o evento onSubmit */}
                         <div className='password-input-group'>
                             <label htmlFor='password'>Nova senha</label>
-                            <input 
-                                type="password" 
-                                id="password" 
-                                value={password} 
+                            <input
+                                type="password"
+                                id="password"
+                                value={password}
                                 onChange={handlePasswordChange}
-                                placeholder="Digite sua senha" 
+                                placeholder="Digite sua senha"
                                 required
                             />
                         </div>
                         <div className='password-input-group'>
                             <label htmlFor='confirmPassword'>Confirme nova senha</label>
                             <input
-                                type="password" 
-                                id="confirmPassword" 
-                                value={confirmPassword} 
+                                type="password"
+                                id="confirmPassword"
+                                value={confirmPassword}
                                 onChange={handleConfirmPasswordChange}
-                                placeholder="Confirme nova senha" 
+                                placeholder="Confirme nova senha"
                                 required
                             />
                         </div>
                         {confirmPassword && (
-                            match ? 
-                            <p style={{ color: 'green' }}>As senhas correspondem!</p> : 
-                            <p style={{ color: 'red' }}>As senhas não correspondem.</p>
+                            match ?
+                                <p style={{ color: 'green' }}>As senhas correspondem!</p> :
+                                <p style={{ color: 'red' }}>As senhas não correspondem.</p>
                         )}
                         <div className='button-container'>
                             <button type='submit' className='submit-button'>Alterar Senha</button> {/* Remove href */}

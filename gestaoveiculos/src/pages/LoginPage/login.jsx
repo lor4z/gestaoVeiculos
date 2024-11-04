@@ -1,5 +1,5 @@
 import React from 'react';
-import './login.css'; 
+import './login.css';
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -55,7 +55,7 @@ const FrotasLogin = () => {
                 <div className='fields-informations'>
                     <form onSubmit={handleSubmit}>
                         <div className='input-group-field'>
-                        <label htmlFor='email'>Email</label>
+                            <label htmlFor='email'>Email</label>
                             <input
                                 type='email'
                                 className='text-field'
@@ -66,7 +66,7 @@ const FrotasLogin = () => {
                             />
                         </div>
                         <div className='input-group-field'>
-                        <label htmlFor='password'>Senha</label>
+                            <label htmlFor='password'>Senha</label>
                             <input
                                 type='password'
                                 className='password-field'
@@ -86,7 +86,7 @@ const FrotasLogin = () => {
                             <p>Não possui conta? <Link to="/criar-conta">Criar Agora</Link></p>
                         </div>
                         <div className='support-link'>
-                            <Link to="/contato-suporte" className= 'txt-suport-invite'>Conversar com o Suporte ➤</Link>
+                            <Link to="/contato-suporte" className='txt-suport-invite'>Conversar com o Suporte ➤</Link>
                         </div>
                     </form>
                 </div>
@@ -94,7 +94,7 @@ const FrotasLogin = () => {
         </div>
     );
 
-    
+
 }
 
 export default FrotasLogin;

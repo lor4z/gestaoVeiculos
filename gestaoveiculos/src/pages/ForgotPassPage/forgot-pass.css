@@ -6,13 +6,15 @@
     font-family: Poppins;
 }
 
-body, html {
+body,
+html {
     height: 100%;
     font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #333; /* Fundo escuro para contraste */
+    background-color: #333;
+    /* Fundo escuro para contraste */
 }
 
 /* Container Principal */
@@ -28,7 +30,7 @@ body, html {
 .container-main .section-left {
     width: 80vh;
     height: 80vh;
-    background-image: url('../assets/frotas.png');
+    background-image: url('../../assets/frotas.png');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -104,11 +106,12 @@ p {
     border-color: #000;
 }
 
-.input-group input:focus + label {
+.input-group input:focus+label {
     color: #000;
 }
 
-.input-text, .input-password {
+.input-text,
+.input-password {
     width: 100%;
     padding: 12px;
     border-radius: 5px;
