@@ -1,7 +1,7 @@
-import React from 'react';
 import './login.css';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import API from '../../hooks/api';
 
 
 
@@ -16,24 +16,22 @@ const FrotasLogin = () => {
 
         // Enviando os dados de login ao backend
         try {
-            const response = await fetch('', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ email, password }),
-            });
+            const response = await API.post('/login', {
+                login: email,
+                senha: password
+            })
 
-            const data = await response.json();
 
-            if (data.success) {
-                // Login bem-sucedido, redirecionar ou realizar outras ações
-                console.log('Login realizado com sucesso');
+            if (response.status === 200 || response.status === 201) {
+
+                console.log(response.data.mensagem);
                 navigate('/pagina-acesso');
             } else {
-                setError(data.message || 'Credenciais inválidas');
+                setError(response.data.message);
             }
         } catch (error) {
+            console.log(error);
+
             setError('Erro ao realizar login. Senha ou E-mail incorreto.');
         }
     };
@@ -55,7 +53,7 @@ const FrotasLogin = () => {
                 <div className='fields-informations'>
                     <form onSubmit={handleSubmit}>
                         <div className='input-group-field'>
-                            <label htmlFor='email'>Email</label>
+                            <label htmlFor='email'>E-mail</label>
                             <input
                                 type='email'
                                 className='text-field'
