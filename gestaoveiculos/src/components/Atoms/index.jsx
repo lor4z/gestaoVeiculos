@@ -7,3 +7,4 @@ export * from "./IconCheck";
 export * from "./IconGraph";
 export * from "./IconHouse";
 export * from "./IconProfile";
+export * from "./GraficoImg";

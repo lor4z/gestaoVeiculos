@@ -1,5 +1,5 @@
 import React from 'react'
-import { HeaderDashboard } from '../../components'
+import { HeaderDashboard, MainDashboard } from '../../components'
 import style from './style.module.css'
 
 const Dashboard = () => {
@@ -8,6 +8,7 @@ const Dashboard = () => {
     return (
         <div className={style.container}>
             <HeaderDashboard />
+            <MainDashboard />
         </div>
     )
 }

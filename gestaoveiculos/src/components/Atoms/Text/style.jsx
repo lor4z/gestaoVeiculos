@@ -8,4 +8,5 @@ export const CustomText = styled.p`
     margin-top: ${({ marginTop }) => `${marginTop || 0}px`};
     margin-left: ${({ marginLeft }) => `${marginLeft || 0}px`};
     margin-bottom: ${({ marginBottom }) => `${marginBottom || 0}px`};
+    font-weight: ${({ weight }) => weight || 'normal'};
 `
