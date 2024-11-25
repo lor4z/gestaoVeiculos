@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 7vh;
+
+}
+
+.logoLink {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 25%;
+    margin-left: 3%;
+
+}

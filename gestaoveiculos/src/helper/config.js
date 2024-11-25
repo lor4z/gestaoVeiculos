@@ -1,1 +1,1 @@
-export const API_URL = 'http://localhost:8080/movitech';
+export const API_URL = "http://localhost:8080/movitech";

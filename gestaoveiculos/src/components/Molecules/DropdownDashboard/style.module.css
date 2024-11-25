@@ -1,0 +1,120 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 50%;
+    height: 7vh;
+
+}
+
+.perfilCard {
+    width: 25%;
+    height: 6vh;
+    margin-right: 2%;
+    border-radius: 12rem;
+    border: solid 0.1rem #e4e4e4cc;
+}
+
+.placeholderMenu {
+    display: flex;
+    flex-direction: row;
+    height: 6vh;
+    border-radius: 12rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+.perfilPhoto {
+    background-color: antiquewhite;
+    height: 6vh;
+    width: 25%;
+    border-radius: 50%;
+
+}
+
+.nameArea {
+    display: flex;
+    flex-direction: column;
+    height: 6vh;
+    justify-content: center;
+    margin-left: 6%;
+}
+
+.menu {
+    position: absolute;
+    top: 4.5rem;
+    right: 1.5rem;
+
+    list-style-type: none;
+    width: 12%;
+    height: 30vh;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    border-top: 0;
+    border-bottom: 0.1rem;
+    border-left: 0.1rem;
+    border-right: 0.1rem;
+    border-color: #e4e4e4cc;
+    border-style: solid;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    opacity: 0;
+    /* Menu inicia invisível */
+    transform: scaleY(0);
+    /* Menu está "colapsado" verticalmente */
+    transform-origin: top;
+    /* Animação de abertura vem de cima */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: none;
+
+}
+
+.menuActive {
+    position: absolute;
+    top: 4.5rem;
+    right: 1.5rem;
+
+    list-style-type: none;
+    width: 12%;
+    height: 30vh;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    border-top: 0;
+    border-bottom: 0.1rem;
+    border-left: 0.1rem;
+    border-right: 0.1rem;
+    border-color: #e4e4e4cc;
+    border-style: solid;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    opacity: 1;
+    transform: scaleY(1);
+    pointer-events: auto;
+    display: block;
+}
+
+.rowsContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+}
+
+.rows {
+    color: #07204F;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    transition: 0.3s ease, color 0.3s ease;
+    margin-top: 5%;
+    margin-left: 13%;
+    cursor: pointer;
+    border-radius: 12rem;
+}
+
+.rows:hover {
+    color: #07204F;
+    background-color: #F1F5FA;
+}
