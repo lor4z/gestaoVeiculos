@@ -21,7 +21,7 @@ const FrotasLogin = () => {
 
       if (response.status === 200 || response.status === 201) {
         console.log(response.data.mensagem);
-        navigate("/pagina-acesso");
+        navigate("/Dashboard");
       } else {
         setError(response.data.message);
       }
@@ -87,7 +87,7 @@ const FrotasLogin = () => {
               </p>
             </div>
             <div className="support-link">
-              <Link to="/Dashboard" className="txt-suport-invite">
+              <Link to="/contato-suporte" className="txt-suport-invite">
                 Conversar com o Suporte ➤
               </Link>
             </div>

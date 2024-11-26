@@ -106,7 +106,7 @@ p {
   border-color: #000;
 }
 
-.input-group input:focus + label {
+.input-group input:focus+label {
   color: #000;
 }
 
@@ -138,13 +138,15 @@ p {
   background-color: #0056b3;
 }
 
-.back-login {
+.back-login,
+.login-account {
   align-items: center;
   margin: 20px 0;
   text-align: center;
 }
 
-.back-login a {
+.back-login a,
+.login-account a {
   text-decoration: none;
   color: #0053ff;
 }

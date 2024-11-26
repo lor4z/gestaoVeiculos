@@ -79,7 +79,7 @@ const FrotasRecuperarSenha = () => {
               </p>
             </div>
             <div className="support">
-              <a href="/contato-suporte" className="support-text">
+              <a href="/recuperar-senha" className="support-text">
                 Fale com o suporte ➤
               </a>
             </div>
